@@ -1,0 +1,237 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-body: hsl(0, 0%, 100%);
+  --color-border: hsl(0, 0%, 58%);
+  --color-heading: hsl(234, 29%, 20%);
+  --color-primary: hsl(4, 100%, 67%);
+  --color-text: hsl(235, 18%, 26%);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--color-body);
+  display: grid;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.01rem;
+  line-height: 1.5;
+  margin: 0;
+  min-height: 95vh;
+  place-items: center;
+}
+
+h2 {
+  color: var(--color-heading);
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+p {
+  color: var(--color-text);
+}
+
+.bold {
+  font-weight: 900;
+}
+
+/* FIXIT:  the important value */
+
+.hidden {
+  display: none !important;
+}
+
+/* TODO: RESPOSIVE BY APPLYING RESPOSIVE UNIT FOR TABLET */
+
+.newsletter-signup {
+  width: 30rem;
+}
+
+@media (min-width: 1024px) {
+  h2 {
+    font-size: 3.3rem;
+  }
+
+  .newsletter-signup {
+    width: 70rem;
+    border-radius: 30px;
+    display: flex;
+    padding: 1.5rem;
+    gap: 4rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.newsletter-signup__image {
+  width: 30rem;
+}
+
+.newsletter-signup__content {
+  padding: 1.5rem;
+}
+
+.newsletter-signup__title {
+  margin-block: 0;
+}
+
+.newsletter-signup__text {
+  margin-block: 1rem 2rem;
+}
+
+@media (min-width: 1024px) {
+  .newsletter-signup__header {
+    order: 2;
+  }
+
+  .newsletter-signup__content {
+    order: 1;
+    padding: 4rem 0 0 3rem;
+  }
+}
+
+.list {
+  color: var(--color-text);
+  list-style: none;
+  margin-block-end: 2rem;
+  padding-inline-start: 0;
+}
+
+.list__item {
+  align-items: flex-start;
+  display: flex;
+  gap: 16px;
+  margin-block-end: 0.5rem;
+}
+
+.list__item::before {
+  content: url(assets/images/icon-list.svg);
+}
+
+.label-primary {
+  color: var(--color-heading);
+  display: flex;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.error-message {
+  color: var(--color-primary);
+  margin-inline: auto 0;
+}
+
+.email {
+  border-radius: 5px;
+  border: 1px solid var(--color-border);
+  color: var(--color-border);
+  font-size: 1.25rem;
+  margin-block-start: 0.8rem;
+  outline: 0;
+  padding: 1.3rem 2rem;
+  width: 100%;
+}
+
+input[type="email"]:focus {
+  border: 1px solid var(--color-heading);
+  color: var(--color-heading);
+}
+
+input[type="email"]:invalid {
+  border: 1px solid var(--color-primary);
+  background-color: #ffe6e6;
+  color: var(--color-primary);
+}
+
+.btn {
+  background-color: var(--color-heading);
+  border-radius: 5px;
+  border: 0;
+  color: var(--color-body);
+  font-family: "Roboto" sans-serif;
+  font-size: 1.2rem;
+  outline: 0;
+  padding: 1.3rem 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, hsl(4, 100%, 67%), hsl(4, 100%, 50%));
+  box-shadow: 0 2px 6px var(--color-primary);
+}
+
+.newsletter-signup__button {
+  margin-block-start: 1.5rem;
+}
+
+.newsletter-success {
+  margin-block-end: 15rem;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.newsletter-success__title {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  line-height: initial;
+  margin-block-end: 2rem;
+}
+
+.newsletter-success__title::before {
+  content: url(assets/images/icon-success.svg);
+}
+
+.newsletter-success__button {
+  bottom: -225px;
+  position: absolute;
+}
+/* 
+@media (min-width: 1024px) {
+  .newsletter-success {
+    width: 30rem;
+    border-radius: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    padding: 1rem;
+    min-width: 0;
+  }
+
+  .newsletter-success__button {
+    position: static;
+  }
+  .newsletter-success__title {
+  }
+} */
+.newsletter-success {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%; /* or a fixed height if needed */
+}
+
+.newsletter-success__button {
+  margin-top: auto;
+}

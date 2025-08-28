@@ -37,50 +37,56 @@
               class="newsletter-signup__image"
             />
           </picture>
-          <div class="newsletter-signup__content">
-            <h1 class="newsletter-signup__title">Stay updated!</h1>
-            <p class="newsletter-signup__text">
-              Join 60,000+ product managers receiving monthly updates on:
-            </p>
-            <ul class="newsletter-signup__lists">
-              <li class="newsletter-signup__list">
-                Product discovery and building what matters
-              </li>
-              <li class="newsletter-signup__list">
-                Measuring to ensure updates are a success
-              </li>
-              <li class="newsletter-signup__list">And much more!</li>
-            </ul>
-            <form id="sign-up" class="newsletter-signup__form" novalidate>
-              <div class="form-field">
-                <label for="email"
-                  >Email address
-                  <span aria-live="polite" id="email-error"></span
-                ></label>
-                <input
-                  autofocus
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="email@company.com"
-                />
-              </div>
-              <button class="newsletter-signup__button" type="submit">
-                Subscribe to monthly newsletter
-              </button>
-            </form>
-          </div>
+        </div>
+        <div class="newsletter-signup__content">
+          <h2 class="newsletter-signup__title">Stay updated!</h2>
+          <p class="newsletter-signup__text">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+          <ul class="list">
+            <li class="list__item">
+              Product discovery and building what matters
+            </li>
+            <li class="list__item">
+              Measuring to ensure updates are a success
+            </li>
+            <li class="list__item">And much more!</li>
+          </ul>
+          <form id="sign-up" class="newsletter-signup__form" novalidate>
+            <div class="form-field">
+              <label class="label-primary" for="email"
+                >Email address
+                <span aria-live="polite" class="error-message"
+                  >valid email required</span
+                ></label
+              >
+              <input
+                autofocus
+                id="email"
+                class="email"
+                name="email"
+                type="email"
+                placeholder="email@company.com"
+              />
+            </div>
+            <button class="btn newsletter-signup__button" type="submit">
+              Subscribe to monthly newsletter
+            </button>
+          </form>
         </div>
       </article>
 
-      <article class="newsletter-success">
-        <h1 class="newsletter-success__title">
-          Thanks for subscribing! A confirmation email has been sent to
-        </h1>
+      <article class="newsletter-success hidden">
+        <h2 class="newsletter-success__title">Thanks for subscribing!</h2>
         <p class="newsletter-success__text">
-          ash@loremcompany.com. Please open it and click the button inside to
-          confirm your subscription. Dismiss message
+          A confirmation email has been sent to
+          <span class="bold">ash@loremcompany.com</span>. Please open it and
+          click the button inside to confirm your subscription.
         </p>
+
+        <button class="btn newsletter-success__button" type="submit">
+          Dismiss message
+        </button>
       </article>
     </section>
   </body>
