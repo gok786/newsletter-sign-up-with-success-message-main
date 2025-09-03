@@ -13,6 +13,7 @@
       Frontend Mentor | Newsletter sign-up form with success message
     </title>
     <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
   </head>
   <body>
     <section class="newsletter-card">
@@ -52,14 +53,12 @@
             </li>
             <li class="list__item">And much more!</li>
           </ul>
-          <form id="signup" class="newsletter-signup__form" novalidate>
+          <form id="signup-form" class="newsletter-signup__form" novalidate>
             <div class="form-field">
               <label class="label-primary" for="email"
                 >Email address
-                <span aria-live="polite" class="error-message"
-                  >valid email required</span
-                ></label
-              >
+                <span aria-live="polite" class="error-message"></span
+              ></label>
               <input
                 autofocus
                 id="email"
@@ -76,7 +75,7 @@
         </div>
       </article>
 
-      <article class="newsletter-success">
+      <article class="newsletter-success hidden">
         <div class="newsletter-success__content">
           <h2 class="newsletter-success__title">Thanks for subscribing!</h2>
           <p class="newsletter-success__text">

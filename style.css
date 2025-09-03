@@ -85,12 +85,12 @@ p {
   }
 
   .newsletter-signup {
-    width: 70rem;
     border-radius: 30px;
-    display: flex;
-    padding: 1.5rem;
-    gap: 4rem;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    display: flex;
+    gap: 4rem;
+    padding: 1.5rem;
+    width: 70rem;
   }
 }
 
@@ -178,8 +178,8 @@ input[type="email"]:focus {
 }
 
 input[type="email"]:invalid {
-  border: 1px solid var(--color-primary);
   background-color: #ffe6e6;
+  border: 1px solid var(--color-primary);
   color: var(--color-primary);
 }
 
@@ -206,12 +206,12 @@ input[type="email"]:invalid {
 }
 
 .newsletter-success {
-  padding: 1.5rem;
-  width: 30rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
+  padding: 1.5rem;
+  width: 30rem;
 }
 
 .newsletter-success__content {
@@ -246,11 +246,11 @@ input[type="email"]:invalid {
 
 @media (min-width: 1024px) {
   .newsletter-success {
-    width: 35rem;
     border-radius: 30px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    padding: 4.3rem;
     min-height: fit-content;
+    padding: 4.3rem;
+    width: 35rem;
   }
 
   .newsletter-success__content {
@@ -267,7 +267,7 @@ input[type="email"]:invalid {
   }
 
   .newsletter-success__button {
-    margin-block: 1.3rem 0;
     font-size: 1.2rem;
+    margin-block: 1.3rem 0;
   }
 }
